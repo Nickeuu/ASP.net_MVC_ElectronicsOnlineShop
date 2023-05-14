@@ -1,0 +1,49 @@
+﻿@model DataLibrary.Models.CartItemModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p><h2>User orders details</h2></p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CartId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CartId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CartItemId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
